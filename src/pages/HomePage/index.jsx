@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../../components/ProjectCard";
+import "./HomePage.css";
 
 function HomePage() {
     // We are using the useState hook to update the state of our React App.
     const [projectData, updateProjectData] = useState([]);
+    const [loggedIn, setLoggedIn] = useState(!!window.localStorage.getItem('token'));
+    
 
     // We are using the useEffect hook to call/fetch data from our API and put that data into useState. 
     useEffect(() => {
@@ -13,8 +16,12 @@ function HomePage() {
         .catch(err => {console.log("error is", err)})
     }, []);
 
+    if (!loggedIn) {
+        return "Please login to review projects"
+    }
+
     return (
-        <div>
+        <div className="project-cards">
             {projectData.map((project, index) => {
                 return <ProjectCard key={index} projectData={project} />
             })
