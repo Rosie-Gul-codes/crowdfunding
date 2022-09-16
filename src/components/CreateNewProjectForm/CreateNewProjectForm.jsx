@@ -48,7 +48,7 @@ function CreateNewProjectForm() {
     return (
         <form>
         <div>
-        <label htmlFor="title">title:</label>
+        <label htmlFor="title">Title:</label>
         <input
             type="text"
             id="title"
@@ -57,13 +57,31 @@ function CreateNewProjectForm() {
         />
         </div>
         <div>
-        <label htmlFor="desciption">desciption:</label>
+        <label htmlFor="description">Description:</label>
         <input
             type="text"
-            id="desciption"
+            id="description"
             placeholder="description"
             onChange={handleChange}
         />
+        <div>
+        <label htmlFor="image">image</label>
+        <input
+            type="text"
+            id="image"
+            placeholder="Enter image"
+            onChange={handleChange}
+        />
+        </div>
+        <div>
+        <label htmlFor="goal">Goal:</label>
+        <input
+            type="text"
+            id="goal"
+            placeholder="Enter goal"
+            onChange={handleChange}
+        />
+        </div>
         </div>
         <button type="submit" onClick={handleSubmit}>
         submit
