@@ -4,7 +4,7 @@ import "./header.css"
     function Header() {
         return (
             <header>
-            <div class="header-text">
+            <div className="header-text">
                 <a href="index.html">                
                 </a>
 
