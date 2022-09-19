@@ -22,7 +22,7 @@ function ProjectPage() {
         <h3>{`Status: {projectData.is_open}`}</h3>
         <h3>Pledges:</h3> 
         <h3>Description:{projectData.description}</h3>  
-        <h3>Goal:100 glass containers {projectData.goal}</h3>    
+        <h3>Goal:{projectData.goal}</h3>    
         {/* <h3>Date created: {projectData.date_created}</h3>    */}
         <ul>
             {projectData.pledges.map((pledge, index) => (
